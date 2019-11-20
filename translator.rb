@@ -1,26 +1,36 @@
 class Translator
-  @@spanish_words = {
-    department: "departamento", 
-    tenant: "inquilino", 
-    owner: "propetario", 
-    rent: "renta"
-  }
-  @@english_words = {
-    departamento: "department", 
-    inquilino: "tenant", 
-    propetario: "owner", 
-    renta: "rent"
-  }
-     
+  
   def self.words(lenguage, word)
     case lenguage.downcase 
       when "spanish"
-        "#{word.downcase} => #{@@spanish_words[word.downcase.to_sym]}"
+        spanish_words(word)
       when "english"
-        "#{word.downcase} => #{@@english_words[word.downcase.to_sym]}"
+        english_words(word)
       else
         "#{language} not found"  
     end
+  end
+  
+  private
+
+  def self.spanish_words(word)
+    spanish = {
+      department: "departamento", 
+      tenant: "inquilino", 
+      owner: "propetario", 
+      rent: "renta"
+    }
+    spanish[word.downcase.to_sym]
+  end  
+
+  def self.english_words(word)
+    english = {
+      departamento: "department", 
+      inquilino: "tenant", 
+      propetario: "owner", 
+      renta: "rent"
+    }
+    english[word.downcase.to_sym]
   end  
 end
     
