@@ -1,6 +1,6 @@
-var getWelcome = name => {
-  return function() {
-    return `Hi ${name}`;
+let getWelcome = name => {
+  return getName => {
+    return `Hi ${name}` 
   };
 }
   
