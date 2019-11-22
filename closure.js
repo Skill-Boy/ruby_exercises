@@ -1,4 +1,4 @@
-function getWelcome(name) {
+var getWelcome = name => {
   return function() {
     return `Hi ${name}`;
   };
