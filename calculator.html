@@ -13,10 +13,10 @@
 <button type="button" onclick='numbers("multiply")'>MULTIPLY</button>
 <br>
 <button type="button" onclick='numbers("divide")'>DIVIDE</button>
-<p id="result"></h>
+<p id="result"></p>
 
 <script type="text/javascript">
-  function numbers(valueNumber){
+  var numbers = valueNumber => {
     var number1 = document.getElementById("num1").value;
     var number2 = document.getElementById("num2").value;
     
@@ -24,27 +24,23 @@
       calculator(valueNumber, number1, number2);
   }
   
-  function isNumber(number1, number2){  
+  var isNumber = (number1, number2) => {  
     if(isNaN(number1)) return messageResult("no is a number");
     if(isNaN(number2)) return messageResult("no is a number");     
       return true;     
   }
 
-  function isEmpty(number1, number2){
+  var isEmpty = (number1, number2) => {
     if(number1 == '') return messageResult("empty"); 
     if(number2 == '') return messageResult("empty"); 
-      return true;  
-  }
+      return true;
+  }  
+  
+  var numbersCase = result => {document.getElementById("result").innerHTML = result};    
 
-  function numbersCase(result){
-    document.getElementById("result").innerHTML = result;    
-  }
-
-  function messageResult(message){
-    document.getElementById("result").innerHTML = message;
-  }
-
-  function calculator(valueNumber, number1, number2){
+  var messageResult = message => {document.getElementById("result").innerHTML = message};
+  
+  var calculator = (valueNumber, number1, number2) => {
     switch (valueNumber) {
       case "sum":
         numbersCase(Number(number1) + Number(number2));
@@ -61,8 +57,8 @@
       default:
         `${valueNumber} no found`
         break;
-    }
-  }
+   }
+  }  
 </script>
 </body>
 </html>
