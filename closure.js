@@ -1,11 +1,10 @@
-let getWelcome = name => {
-  return getName => {
-    return `Hi ${name}` 
-  };
+const getWelcome = (name) => {
+  const getName = name;
+  return () => { return `Hi ${getName}` };
 }
-  
+
 const greetHomie = getWelcome('Homie');
 const greetFco = getWelcome('Fco');
-  
+
 greetHomie();
 greetFco();
