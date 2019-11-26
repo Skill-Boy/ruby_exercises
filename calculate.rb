@@ -1,8 +1,8 @@
-def calculate(number_left, number_right)  
-  yield(number_left, number_right)   
+def calculate(number_one, number_two)  
+  yield(number_one, number_two)   
 end  
   
-calculate(15, 10) {|number_left, number_right| number_left + number_right}
-calculate(15, 10) {|number_left, number_right| number_left - number_right}
-calculate(15, 10) {|number_left, number_right| number_left * number_right}
-calculate(15, 10) {|number_left, number_right| number_left.fdiv(number_right)} 
+calculate(15, 10) {|number_one, number_two| number_one + number_two}
+calculate(15, 10) {|number_one, number_two| number_one - number_two}
+calculate(15, 10) {|number_one, number_two| number_one * number_two}
+calculate(15, 10) {|number_one, number_two| number_one.fdiv(number_two)} 
