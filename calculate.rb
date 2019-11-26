@@ -1,24 +1,8 @@
-def calculate(sum)
-  sum.call(10, 5)
-end
+def calculate(number_left, number_right)  
+  yield(number_left, number_right)   
+end  
   
-sum = Proc.new do |a, b|
-  a + b 
-end
-  
-abs = Proc.new do |a, b|
-  a - b
-end
-  
-mul = Proc.new do |a, b|
-  a * b
-end
-  
-div = Proc.new do |a, b|
-  a / b
-end
-  
-p calculate(sum)
-p calculate(abs)
-p calculate(mul)
-p calculate(div)
+calculate(15, 10) {|number_left, number_right| number_left + number_right}
+calculate(15, 10) {|number_left, number_right| number_left - number_right}
+calculate(15, 10) {|number_left, number_right| number_left * number_right}
+calculate(15, 10) {|number_left, number_right| number_left.fdiv(number_right)} 
