@@ -1,6 +1,8 @@
 const diagonalSum = numbers => {
   horizontalSum = [];
-  verticalSum = numbers[0].map((column, iteration) => numbers.map(row => row[iteration]));
+  verticalSum = numbers[0]
+    .map((column, iteration) => numbers
+    .map(row => row[iteration]));
   verticalMax = [];
 
   if (diagonals(verticalSum, verticalMax) > diagonals(numbers, horizontalSum)) return diagonals(verticalSum, verticalMax);
