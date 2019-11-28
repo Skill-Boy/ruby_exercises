@@ -5,7 +5,8 @@ const diagonalSum = numbers => {
     .map(row => row[iteration]));
   verticalMax = [];
 
-  if (diagonals(verticalSum, verticalMax) > diagonals(numbers, horizontalSum)) return diagonals(verticalSum, verticalMax);
+  if (diagonals(verticalSum, verticalMax) > diagonals(numbers, horizontalSum)) 
+    return diagonals(verticalSum, verticalMax);
     return diagonals(numbers, horizontalSum);  
 }
 
