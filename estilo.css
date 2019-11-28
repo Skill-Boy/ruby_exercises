@@ -1,5 +1,5 @@
 #container{
-  width: 95%;
+  width: 98%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,28 +11,47 @@ header{
   height: 50px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: #333c;  
+  color: #333c; 
+  margin-top: 30px; 
+}
+
+#title_principal{
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  color: #333;
+  font-size: 36px;
 }
 
 section{
-  width: 90%;
-  margin-top: 40px;  
+  width: 87%;
+  margin-top: 50px;  
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 #back{
-  width: 65%;
+  width: 70%;
   height: 300px;
   background-position: right center;
   background-repeat: no-repeat;
-  background-image: url("house.jpg");  
+  background-image: url("house.jpg"); 
+  border-radius: 5px;
 }
 
 aside{
-  width: 32%;
-  height: 280px;  
+  width: 29%;
+  height: 300px;  
+  border-radius: 5px;
+  border-right: 1px #c3c3c3 solid;
+  border-top: 1px #c3c3c3 solid;
+  border-bottom: 1px #c3c3c3 solid;
+  padding-left: 20px;
+  position: relative;
+}
+
+#title{
+  color: #999;
 }
 
 #price{
@@ -41,15 +60,66 @@ aside{
 
 #direction{
   font-size: 18px;
-  color: #2a63cb;  
+  color: #2a63cb;
+  max-width: 75%;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #state{
   font-size: 14px;
   color: #999;  
+  clear: both;
+  position: absolute;
+  top: 25px;
 }
 
 #text-house{
   color: #999;
-  font-size: 15px;  
+  font-size: 15px;
+  display: -webkit-box;
+  max-width: 84%;
+  height: 109.2px;
+  margin: 0 auto;
+  line-height: 1.4;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+}
+
+#prices{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  left: 30px;
+}
+
+.size{
+  width: 90%;
+  height: 25px;
+}
+
+.size_state{
+  height: 35px;
+}
+
+#states{
+  margin-top: 35px;
+  width: 100%;
+  position: absolute;
+  left: 30px;
+  top: 42px;
+}
+
+#houses{
+  margin-top: 25px;
+  width: 90%;
+  height: 110px;
+  position: absolute;
+  bottom: 27px;
+  left: 30px;
 }
