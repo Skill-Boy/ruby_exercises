@@ -36,7 +36,8 @@ section{
   background-position: right center;
   background-repeat: no-repeat;
   background-image: url("house.jpg"); 
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
   position: relative;
 }
 
