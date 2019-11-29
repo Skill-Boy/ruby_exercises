@@ -46,7 +46,8 @@ section{
   position: absolute;  
   bottom: 0;
   opacity: 0.3;
-  background: linear-gradient(gray,black);
+  background-position: center top;
+  background: linear-gradient(#c3c3c3, black);
 }
 
 aside{
@@ -106,6 +107,7 @@ aside{
   width: 100%;
   position: absolute;
   left: 30px;
+  margin-top: 5px;
 }
 
 .size{
